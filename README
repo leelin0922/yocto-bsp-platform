@@ -1,0 +1,24 @@
+To get the BSP you need to have `repo` installed and use it as:  
+
+Install the `repo` utility:  
+To get the BSP you need to have "repo" installed. This only needs to be done once.  
+$: mkdir ~/bin
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+$: chmod a+x ~/bin/repo
+$: PATH=${PATH}:~/bin
+
+Download the BSP Yocto Project Environment.
+$: mkdir fsl-arm-yocto-bsp
+$: cd fsl-arm-yocto-bsp
+$: repo init -u https://github.com/leelin0922/yocto-bsp-platform.git -b morty
+$: repo sync
+
+At the end of the commands you have every metadata you need to start work with.
+
+To start a simple image build:
+$: DISTRO=fsl-imx-x11 MACHINE=imx6dlsabresd source fsl-setup-release.sh -b build-x11
+Build For All Backends
+Build without Qt
+$: bitbake fsl-image-validation-imx
+Build with Qt 5
+$: bitbake fsl-image-qt5-validation-imx
