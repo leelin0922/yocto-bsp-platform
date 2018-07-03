@@ -8,8 +8,8 @@ $: chmod a+x ~/bin/repo
 $: PATH=${PATH}:~/bin
 
 Download the BSP Yocto Project Environment.
-$: mkdir fsl-arm-yocto-bsp
-$: cd fsl-arm-yocto-bsp
+$: mkdir fsl-release-bsp
+$: cd fsl-release-bsp
 $: repo init -u https://github.com/leelin0922/yocto-bsp-platform.git -b morty
 $: repo sync
 
