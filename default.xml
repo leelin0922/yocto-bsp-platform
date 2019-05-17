@@ -4,31 +4,33 @@
   <default sync-j="2"/>
 
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/leelin0922" name="poky"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://github.com/openembedded" name="oe"/>
   <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="git://github.com/meta-qt5"  name="QT5"/>
-  <remote fetch="git://github.com/AplexOS" name="meta-fsl-bsp-release" />
+  <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>
 
-  <project remote="yocto" revision="78890ea22750804e3e9113e76f7ca3d7234c8342" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="a398b50b7fc084a9e68cc3000c218d5028522a25" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="poky" revision="8e49fa1ab423bdcacaa305687d37b89bfc7efa89" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="49ac225a38f6d84519798e3264f2e4d19b84f70a" name="meta-freescale" path="sources/meta-freescale"/>
 
-  <project remote="oe" revision="fe5c83312de11e80b85680ef237f8acb04b4b26e" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="dacfa2b1920e285531bec55cd2f08743390aaf57" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="freescale" revision="morty" name="fsl-community-bsp-base" path="sources/base">
-      <linkfile dest="README" src="README"/>
-      <linkfile dest="setup-environment" src="setup-environment"/>
+  <project remote="freescale" revision="70535e13dd2aabbad53243518f4cc5064d284592" name="fsl-community-bsp-base" path="sources/base">
+	<linkfile dest="README" src="README"/>
+	<linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="68314612e236cab1da82d72a0da62635a3523f84" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="freescale" revision="cd5c7a2539f40004f74126e9fdf08254fd9a6390" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="freescale" revision="1d6d5961dbf82624b28bb318b4950a64abc31d12" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="0ec6d7e206705702b5b534611754de0787f92b72" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
-  <project remote="OSSystems" revision="10f6e3778d823ee1be106c126216c6f941088fbf" name="meta-browser" path="sources/meta-browser" />
-  <project remote="QT5" revision="ff073f04109900fc07bf81e2f1df63c626caf342" name="meta-qt5" path="sources/meta-qt5" />
+  <!-- Use a newer version of chromium than is currently available on rocko -->
+  <project remote="OSSystems" revision="d807b901b0b68b478093964bd60a77b9376b3f12" name="meta-browser" path="sources/meta-browser" />
+  <project remote="QT5" revision="32bb7d18a08d1c48873d7ab6332d4cc3815a4dff" name="meta-qt5" path="sources/meta-qt5" />
 
-  <project remote="meta-fsl-bsp-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="7260d736c667ea9941ad6480283def3574914d55" >
-      <linkfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
-      <linkfile src="imx/README" dest="README-IMXBSP"/>
+  <project remote="poky" revision="633d28cbb947d0c2a5ea43471917f540100df9d5" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" >
+     <linkfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
+     <linkfile src="imx/README" dest="README-IMXBSP"/>
   </project>
 
 </manifest>
