@@ -10,7 +10,7 @@ $: PATH=${PATH}:~/bin
 Download the BSP Yocto Project Environment.
 $: mkdir fsl-release-bsp
 $: cd fsl-release-bsp
-$: repo init -u https://github.com/leelin0922/yocto-bsp-platform.git -b morty
+$: repo init -u https://github.com/leelin0922/yocto-bsp-platform.git -b rocko
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
